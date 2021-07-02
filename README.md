@@ -108,6 +108,45 @@ Variables definidas dentro de un bloque, por ejemplo variables declaradas dentro
 
 Cuando se denota un script de tipo module con el atributo type="module las variables son limitadas al archivo en el que están declaradas.
 
+**Examples**
+
+```js
+// Global Scope
+var message = "Hello, Platzi!";
+var $ = function (message) {
+  console.log("Say: " + message);
+};
+
+// Function Scope
+function printNumbers() {
+  var i;
+  for (i = 0; i < 10; i++) {
+    function eventuallyPrintNumber(n) {
+      setTimeout(function () {
+        console.log(n);
+      }, 100);
+    }
+
+    eventuallyPrintNumber(i);
+  }
+}
+
+printNumbers();
+
+// Block Scope
+function printNumbers2() {
+  for (let i = 0; i < 10; i++) {
+    setTimeout(function () {
+      console.log(i);
+    }, 100);
+  }
+}
+
+printNumbers2();
+
+// Module Scope
+```
+
 ## Closures
 
 Son funciones que regresan una función o un objeto con funciones que mantienen las variables que fueron declaradas fuera de su scope.
