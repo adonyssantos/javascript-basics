@@ -153,13 +153,13 @@ Son funciones que regresan una función o un objeto con funciones que mantienen 
 
 Los **closures** nos sirven para tener algo parecido a variables privadas, característica que no tiene JavaScript por _default_. Es decir encapsulan variables que no pueden ser modificadas directamente por otros objetos, sólo por funciones pertenecientes al mismo.
 
-**Example**
+**Examples**
 
 ```js
 // Closures
 // printColor
 
-// IIFE (es una funcion que se declara y se lla de inmediato)
+// IIFE (es una función que se declara y se lla de inmediato)
 (function () {
   let color = "green";
 
