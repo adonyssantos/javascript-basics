@@ -279,3 +279,13 @@ Person.prototype.saludar = function () {
 const angela = new Person("Angela");
 angela.saludar();
 ```
+
+## Los métodos call, apply y bind
+
+Estas funciones nos sirven para establecer el valor de _this_, es decir cambiar el contexto que se va usar cuando la función sea llamada.
+
+Las funciones **call, apply y bind** son parte del prototipo Function. Toda función usa este prototipo y por lo tanto tiene estas tres funciones.
+
+`functionName.call()`, ejecuta la función recibiendo como primer argumento el _this_ y los siguientes son los argumentos que recibe la función que llamó a call.
+`functionName.apply()`, ejecuta la función recibiendo como primer argumento el _this_ y como segundo un arreglo con los argumentos que recibe la función que llamó a apply.
+`functionName.bind()`, recibe como primer y único argumento el _this_. No ejecuta la función, sólo regresa otra función con el nuevo _this_ integrado.
