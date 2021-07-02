@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>this</title>
@@ -25,7 +26,7 @@
 
       // this en el scope de una función en strict mode
       function whoIsThisStrict() {
-        'use strict';
+        "use strict";
         return this;
       }
 
@@ -33,8 +34,8 @@
 
       // this en el contexto de un objeto
       const person = {
-        name: 'Gabriel',
-        saludar: function() {
+        name: "Gabriel",
+        saludar: function () {
           console.log(`Hola soy ${this.name}`);
         },
       };
@@ -51,11 +52,11 @@
         this.name = name;
       }
 
-      Person.prototype.saludar = function() {
+      Person.prototype.saludar = function () {
         console.log(`Me llamo ${this.name}`);
       };
 
-      const angela = new Person('Angela');
+      const angela = new Person("Angela");
       angela.saludar();
     </script>
   </body>
